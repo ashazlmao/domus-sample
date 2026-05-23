@@ -1,0 +1,202 @@
+/* ============================================================
+   ANIMATIONS.CSS — Domus Interiors
+   Keyframes, reveal states, stagger delays, scroll trigger classes
+   All animation uses only transform + opacity (GPU composited)
+   ============================================================ */
+
+/* ── ═══════════════════════════════════════════ ── */
+/*    KEYFRAMES                                      */
+/* ── ═══════════════════════════════════════════ ── */
+
+@keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  @keyframes fade-up-slow {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes materialize {
+    0%   { opacity: 0; transform: scale(0.985); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes line-grow {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+  
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.28; }
+  }
+  
+  /* ── ═══════════════════════════════════════════ ── */
+  /*    REVEAL SYSTEM (controlled by JS)               */
+  /*    Elements start hidden, .is-revealed triggers  */
+  /* ── ═══════════════════════════════════════════ ── */
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.65s var(--ease-luxury),
+      transform 0.65s var(--ease-luxury);
+    will-change: opacity, transform;
+  }
+  
+  .reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Slower variant for imagery / large elements */
+  .reveal--slow {
+    opacity: 0;
+    transform: translateY(0) scale(0.99);
+    transition:
+      opacity 0.85s var(--ease-luxury),
+      transform 0.85s var(--ease-luxury);
+    will-change: opacity, transform;
+  }
+  
+  .reveal--slow.is-revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  /* Fade only (no translate) */
+  .reveal--fade {
+    opacity: 0;
+    transition: opacity 0.7s var(--ease-luxury);
+    will-change: opacity;
+  }
+  
+  .reveal--fade.is-revealed {
+    opacity: 1;
+  }
+  
+  /* ── ═══════════════════════════════════════════ ── */
+  /*    HERO PAGE-LOAD STAGGER                         */
+  /*    Applied directly via animation on page load.   */
+  /*    These run immediately without JS triggers.     */
+  /* ── ═══════════════════════════════════════════ ── */
+  
+  /*
+    Usage in HTML:
+    class="hero-anim" data-delay="0"
+    class="hero-anim" data-delay="1"
+    etc.
+    JS applies animation-delay dynamically.
+    OR use these static classes as fallback.
+  */
+  
+  .hero-anim {
+    opacity: 0;
+    animation: fade-up 0.7s var(--ease-luxury) forwards;
+  }
+  
+  .hero-anim--delay-0  { animation-delay: 80ms;  }
+  .hero-anim--delay-1  { animation-delay: 160ms; }
+  .hero-anim--delay-2  { animation-delay: 260ms; }
+  .hero-anim--delay-3  { animation-delay: 380ms; }
+  .hero-anim--delay-4  { animation-delay: 500ms; }
+  .hero-anim--delay-5  { animation-delay: 620ms; }
+  
+  /* Right-side visual: materialize, slower */
+  .hero-anim--visual {
+    opacity: 0;
+    animation: materialize 0.9s var(--ease-luxury) 500ms forwards;
+  }
+  
+  /* Navbar entrance */
+  .hero-anim--nav {
+    opacity: 0;
+    animation: fade-in 0.55s var(--ease-out) 60ms forwards;
+  }
+  
+  /* ── ═══════════════════════════════════════════ ── */
+  /*    STAGGER DELAY UTILITIES (for scroll reveals)   */
+  /* ── ═══════════════════════════════════════════ ── */
+  
+  .reveal[data-delay="0"]  { transition-delay: 0ms; }
+  .reveal[data-delay="1"]  { transition-delay: 80ms; }
+  .reveal[data-delay="2"]  { transition-delay: 160ms; }
+  .reveal[data-delay="3"]  { transition-delay: 240ms; }
+  .reveal[data-delay="4"]  { transition-delay: 320ms; }
+  .reveal[data-delay="5"]  { transition-delay: 400ms; }
+  
+  .reveal--slow[data-delay="1"] { transition-delay: 100ms; }
+  .reveal--slow[data-delay="2"] { transition-delay: 200ms; }
+  .reveal--slow[data-delay="3"] { transition-delay: 300ms; }
+  
+  /* ── ═══════════════════════════════════════════ ── */
+  /*    HOVER MICRO-INTERACTIONS                       */
+  /* ── ═══════════════════════════════════════════ ── */
+  
+  /* Gold eyebrow line: animate in on load */
+  .eyebrow-line-anim {
+    display: inline-block;
+    transform-origin: left center;
+    animation: line-grow 0.5s var(--ease-luxury) 120ms forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Subtle room illustration accent stripe animation */
+  .room-stripe-anim {
+    opacity: 0;
+    animation: fade-in 1.2s var(--ease-luxury) 700ms forwards;
+  }
+  
+  /* ── ═══════════════════════════════════════════ ── */
+  /*    NAVBAR TRANSITIONS (class-based, JS-toggled)   */
+  /* ── ═══════════════════════════════════════════ ── */
+  
+  .navbar {
+    transition:
+      padding var(--dur-mid) var(--ease-out),
+      background var(--dur-mid) var(--ease-out),
+      box-shadow var(--dur-mid) var(--ease-out);
+  }
+  
+  /* ── ═══════════════════════════════════════════ ── */
+  /*    REDUCED MOTION OVERRIDES                       */
+  /* ── ═══════════════════════════════════════════ ── */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .hero-anim,
+    .hero-anim--visual,
+    .hero-anim--nav,
+    .reveal,
+    .reveal--slow,
+    .reveal--fade {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  
+    .cursor {
+      display: none !important;
+    }
+  }
