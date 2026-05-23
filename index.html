@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Domus Interiors — Lucknow's precision interior design studio. Full-home interiors, modular kitchens, and bespoke spaces delivered with architectural discipline." />
+  <title>Domus Interiors — Lucknow</title>
+
+  <!-- Stylesheets (order matters) -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+</head>
+
+<body>
+
+  <!-- ── CUSTOM CURSOR ── -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__ring"></div>
+    <div class="cursor__dot"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ════════════════════════════════════════════ -->
+    <!--  NAVBAR                                      -->
+    <!-- ════════════════════════════════════════════ -->
+    <div class="navbar-wrapper" role="banner">
+      <nav class="navbar" aria-label="Main navigation">
+
+        <!-- Logo -->
+        <a href="/" class="navbar__logo" aria-label="Domus Interiors — Home">
+          Domus <span>Interiors</span>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="navbar__links" role="list">
+          <li><a href="#work"     class="navbar__link">Work</a></li>
+          <li><a href="#services" class="navbar__link">Services</a></li>
+          <li><a href="#process"  class="navbar__link">Process</a></li>
+        </ul>
+
+        <!-- Desktop CTA -->
+        <a href="#contact" class="navbar__cta">Book Consultation</a>
+
+        <!-- Mobile Hamburger -->
+        <button
+          class="navbar__hamburger"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <span class="navbar__hamburger-line"></span>
+          <span class="navbar__hamburger-line"></span>
+          <span class="navbar__hamburger-line"></span>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div
+          class="navbar__mobile-menu"
+          id="mobile-menu"
+          role="dialog"
+          aria-label="Navigation menu"
+          aria-hidden="true"
+        >
+          <a href="#work"     class="navbar__mobile-link">Work</a>
+          <a href="#services" class="navbar__mobile-link">Services</a>
+          <a href="#process"  class="navbar__mobile-link">Process</a>
+          <div class="navbar__mobile-divider" role="separator"></div>
+          <a href="#contact"  class="navbar__mobile-cta">Book a Free Consultation</a>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!--  SECTION 1: HERO                             -->
+    <!-- ════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero">
+
+      <!-- Background texture layer -->
+      <div class="hero__bg-texture" aria-hidden="true"></div>
+
+      <!-- Decorative vertical rule (desktop) -->
+      <div class="hero__rule" aria-hidden="true"></div>
+
+      <!-- Left: Copy -->
+      <div class="hero__left">
+        <div class="hero__content">
+
+          <!-- Eyebrow -->
+          <div class="hero__eyebrow" data-hero-order="0" aria-label="Studio location">
+            <span class="hero__eyebrow-line" aria-hidden="true"></span>
+            Lucknow's Precision Interior Studio
+          </div>
+
+          <!-- Headline -->
+          <h1 class="hero__headline" data-hero-order="1">
+            Your home deserves<br>
+            <em>architecture,</em><br>
+            not guesswork.
+          </h1>
+
+          <!-- Subtext -->
+          <p class="hero__sub" data-hero-order="2">
+            We design full-home interiors where every finish, material, and measurement is confirmed before a single nail goes in. No surprises. No cost overruns.
+          </p>
+
+          <!-- Bullet List -->
+          <ul class="hero__bullets" data-hero-order="3" aria-label="Key promises">
+            <li class="hero-bullet">
+              <span class="hero-bullet__check" aria-hidden="true"></span>
+              Fixed-scope delivery. You approve every detail before execution.
+            </li>
+            <li class="hero-bullet">
+              <span class="hero-bullet__check" aria-hidden="true"></span>
+              3D walkthroughs of your space before a single rupee is committed.
+            </li>
+            <li class="hero-bullet">
+              <span class="hero-bullet__check" aria-hidden="true"></span>
+              Modular kitchens, bedrooms, living rooms &amp; full-home packages.
+            </li>
+            <li class="hero-bullet">
+              <span class="hero-bullet__check" aria-hidden="true"></span>
+              10-year craftsmanship warranty on all installed work.
+            </li>
+            <li class="hero-bullet">
+              <span class="hero-bullet__check" aria-hidden="true"></span>
+              Serving Lucknow homeowners since 2014.
+            </li>
+          </ul>
+
+          <!-- CTA Row -->
+          <div class="hero__cta-row" data-hero-order="4">
+            <a href="#contact" class="btn btn--primary">Book a Free Consultation</a>
+            <a href="#work"    class="btn btn--secondary">View Our Work</a>
+          </div>
+
+          <!-- Microcopy -->
+          <p class="hero__microcopy" data-hero-order="5">
+            No obligation. Site visit within 48 hours.
+          </p>
+
+          <!-- Badges -->
+          <div class="hero__badges" data-hero-order="5" aria-label="Studio credentials">
+            <div class="hero-badge">
+              <span class="hero-badge__num">200+</span>
+              <span class="hero-badge__label">Homes Completed</span>
+            </div>
+            <div class="hero-badge">
+              <span class="hero-badge__num">10 yr</span>
+              <span class="hero-badge__label">Craftsmanship Warranty</span>
+            </div>
+            <div class="hero-badge">
+              <span class="hero-badge__num">4.9</span>
+              <span class="hero-badge__label">Google Rating</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Visual Illustration -->
+      <div class="hero__right" data-hero-visual aria-hidden="true">
+        <div class="hero__visual">
+          <div class="hero__visual-inner">
+
+            <!-- CSS room illustration -->
+            <div class="room">
+              <div class="room__wall"></div>
+              <div class="room__floor"></div>
+              <div class="room__perspective-line-left"></div>
+              <div class="room__perspective-line-right"></div>
+              <div class="room__art">
+                <div class="room__art-inner"></div>
+              </div>
+              <div class="room__panel">
+                <div class="room__panel-bar"></div>
+              </div>
+              <div class="room__fixture">
+                <div class="room__fixture-wire"></div>
+                <div class="room__fixture-shade"></div>
+                <div class="room__fixture-glow"></div>
+              </div>
+              <div class="room__sofa-back"></div>
+              <div class="room__sofa-seat"></div>
+              <div class="room__floor-shadow"></div>
+              <div class="room__side-table"></div>
+            </div>
+
+            <div class="hero__accent-stripe room-stripe-anim"></div>
+            <span class="hero__visual-label">Domus | Living Space</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ════════════════════════════════════════════ -->
+    <!--  SECTION 2: CTA / CONVERSION                 -->
+    <!-- ════════════════════════════════════════════ -->
+    <section class="cta-section" id="contact" aria-label="Book a consultation">
+
+      <!-- Decorative circles -->
+      <div class="cta-section__orb"       aria-hidden="true"></div>
+      <div class="cta-section__orb-inner" aria-hidden="true"></div>
+
+      <div class="cta-section__inner">
+
+        <!-- Left: Core conversion copy -->
+        <div class="cta-section__left">
+
+          <div class="cta-eyebrow reveal" data-delay="0">
+            Limited Project Slots
+          </div>
+
+          <h2 class="cta-headline reveal" data-delay="1">
+            We take on 6 new projects<br>
+            per quarter. <strong>3 slots remain.</strong>
+          </h2>
+
+          <p class="cta-body reveal" data-delay="2">
+            Good interior work takes preparation. The difference between a home you love and one that frustrates you for years comes down to who planned it, and when.
+          </p>
+
+          <p class="cta-body reveal" data-delay="2">
+            Homeowners who book early receive priority scheduling, full material choice, and our most senior design team on their project.
+          </p>
+
+          <div class="cta-urgency reveal" data-delay="3" aria-live="polite">
+            <span class="cta-urgency__dot" aria-hidden="true"></span>
+            Next available slot: July 2025 onwards
+          </div>
+
+          <div class="cta-actions reveal" data-delay="4">
+            <a href="tel:9793997390" class="btn btn--dark">Claim Your Slot Today</a>
+            <a href="tel:9793997390" class="btn btn--outline-dark">Call: 9793 997 390</a>
+          </div>
+
+          <p class="cta-microcopy reveal" data-delay="5">
+            Free site visit. No commitment required to schedule.
+          </p>
+
+        </div>
+
+        <!-- Right: Risk reversal + process -->
+        <div class="cta-section__right reveal--slow" data-delay="1">
+
+          <div style="display: flex; flex-direction: column; gap: 28px;">
+
+            <div style="padding: 28px 32px; border: 1px solid rgba(26,26,24,0.09); background: #F4F2EC;">
+              <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #B89A5A; margin-bottom: 12px;">How it works</p>
+              <ol style="list-style: none; display: flex; flex-direction: column; gap: 16px; counter-reset: step-counter;">
+
+                <li style="display: flex; align-items: flex-start; gap: 16px; counter-increment: step-counter;">
+                  <span style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: rgba(184,154,90,0.4); line-height: 1; flex-shrink: 0; min-width: 24px;">1</span>
+                  <div>
+                    <p style="font-size: 13px; font-weight: 500; color: #1A1A18; margin-bottom: 4px;">Book a free consultation</p>
+                    <p style="font-size: 12px; color: #7A7570; font-weight: 300; line-height: 1.6;">We visit your site within 48 hours and understand your space, timeline, and budget.</p>
+                  </div>
+                </li>
+
+                <li style="display: flex; align-items: flex-start; gap: 16px; counter-increment: step-counter;">
+                  <span style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: rgba(184,154,90,0.4); line-height: 1; flex-shrink: 0; min-width: 24px;">2</span>
+                  <div>
+                    <p style="font-size: 13px; font-weight: 500; color: #1A1A18; margin-bottom: 4px;">Approve before anything is built</p>
+                    <p style="font-size: 12px; color: #7A7570; font-weight: 300; line-height: 1.6;">You receive full 3D drawings, material selection, and a fixed quote. Nothing moves forward without your sign-off.</p>
+                  </div>
+                </li>
+
+                <li style="display: flex; align-items: flex-start; gap: 16px; counter-increment: step-counter;">
+                  <span style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: rgba(184,154,90,0.4); line-height: 1; flex-shrink: 0; min-width: 24px;">3</span>
+                  <div>
+                    <p style="font-size: 13px; font-weight: 500; color: #1A1A18; margin-bottom: 4px;">Executed and handed over</p>
+                    <p style="font-size: 12px; color: #7A7570; font-weight: 300; line-height: 1.6;">Our team builds to the approved plan. We don't leave until every detail matches the design exactly.</p>
+                  </div>
+                </li>
+
+              </ol>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Trust Strip (full width, below both columns) -->
+        <div class="cta-section__trust-strip">
+
+          <div class="trust-item reveal" data-delay="1">
+            <p class="trust-item__title">No Surprise Costs</p>
+            <p class="trust-item__desc">Full scope and budget locked before work begins. You sign off on every detail before a single nail goes in.</p>
+          </div>
+
+          <div class="trust-item reveal" data-delay="2">
+            <p class="trust-item__title">One Point of Contact</p>
+            <p class="trust-item__desc">A dedicated project manager from design to handover. No confusion, no chasing multiple contractors.</p>
+          </div>
+
+          <div class="trust-item reveal" data-delay="3">
+            <p class="trust-item__title">10-Year Warranty</p>
+            <p class="trust-item__desc">Every fitted element carries our 10-year craftsmanship warranty. Work we stand behind, permanently.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- Scripts -->
+  <script src="scripts/navbar.js"></script>
+  <script src="scripts/animations.js"></script>
+
+</body>
+</html>
